@@ -9,6 +9,9 @@ const CATEGORY_ARTICLES_QUERY = gql`
         id
         title
         content
+        description
+        published_at
+        author
         image {
           url
         }

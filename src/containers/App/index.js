@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 
 import Nav from "../../components/Nav";
 import Articles from "../Articles";
@@ -9,13 +9,14 @@ import Category from "../Category";
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
+    <div className="App">      
+      <HashRouter>
       <Switch>
         <Route path="/" component={Articles} exact />
-        <Route path="/article/:id" component={Article} exact />
+        <Route path="/article/:id" component={Article} exact />        
         <Route path="/category/:id" component={Category} exact />
       </Switch>
+     </HashRouter> 
     </div>
   );
 }

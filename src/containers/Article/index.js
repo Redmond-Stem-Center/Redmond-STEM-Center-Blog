@@ -6,40 +6,55 @@ import Moment from "react-moment";
 
 import ARTICLE_QUERY from "../../queries/article/article";
 
+var foo = "RSC Blog"
 const Article = () => {
-  let { id } = useParams();
+  let { id } = useParams(); 
   return (
     <Query query={ARTICLE_QUERY} id={id}>
-      {({ data: { article } }) => {
-        const imageUrl =
-          process.env.NODE_ENV !== "development"
-            ? article.image.url
-            : process.env.REACT_APP_BACKEND_URL + article.image.url;
+      {({ data: { article }}) =>  { 
         return (
           <div>
-            <div
-              id="banner"
-              className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-              data-src={imageUrl}
-              data-srcset={imageUrl}
-              data-uk-img
-            >
-              <h1>{article.title}</h1>
+             <div>
+              <section id="heroM">
+                <div class="heroM-container">
+                 <h6 class="title">{article.title}</h6>
+                </div>
+            </section>
             </div>
-
+          <div class="container">
+          <div class=" text-center">
+           
+            <div class="ima">
+              <img src={article.image.url}></img>
+            </div>
+            </div> 
+           
             <div className="uk-section">
-              <div className="uk-container uk-container-small">
+              <div className="uk-container uk-container-small CategoryTitle blue">
                 <ReactMarkdown source={article.content} />
-                <p>
-                  <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-                </p>
+               </div>
+               <div className="uk-container uk-container-small ">
+               <hr class="spacingF"></hr>
+               <ul className="uk-navbar-nav">
+                
+                <div className="uk-container uk-container-small blue">
+                  Post by: {article.author}    
+                </div>              
+                
+                  <div className="uk-container uk-container-small blue">
+                    <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+                  </div>              
+              </ul>                
               </div>
-            </div>
+            </div>  
+          </div>
           </div>
         );
       }}
+      
     </Query>
   );
 };
+
 
 export default Article;

@@ -1,64 +1,68 @@
-# Strapi Starter React Blog
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> **Warning :warning:**
->
-> This starter is deprecated and relies on the deprecated **[strapi/strapi-legacy-blog](https://github.com/strapi/strapi-legacy-blog)** repository.
->
-> Instead, we recommend that you use our other React blog starters with better SEO support:
->
-> * [**strapi-starter-gatsby-blog**](https://github.com/strapi/strapi-starter-gatsby-blog)
-> * [**strapi-starter-next-blog**](https://github.com/strapi/strapi-starter-next-blog)
+## Available Scripts
 
-React starter for creating a blog with Strapi.
+In the project directory, you can run:
 
-This starter allows you to try Strapi with React with the example of a simple blog. It is fully customizable and due to the fact that it is open source, fully open to contributions. Do not hesitate to add new features etc ...
+### `yarn start`
 
-You may want to know how to develop such a starter by your own! This starter is actually the result of this [tutorial](https://strapi.io/blog/build-a-blog-with-react-strapi-and-apollo)
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-![screenshot image](/screenshot.png)
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Features
+### `yarn test`
 
-- 2 Content types: Article, Category
-- 2 Created articles
-- 3 Created categories
-- Permissions set to `true` for article and category
-- Responsive design using UIkit
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Pages:
+### `yarn build`
 
-- "/" display every articles
-- "/article/:id" display one article
-- "/category/:id" display articles depending on the category
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Getting started
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-### Backend
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-See full instructions [here](https://github.com/strapi/strapi-legacy-blog)
+### `yarn eject`
 
-### Frontend
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```bash
-git clone https://github.com/strapi/strapi-starter-react-blog.git
-cd strapi-starter-react-blog
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Then start the frontend server:
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-```bash
-# Using yarn
-yarn install
-yarn develop
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-# Using npm
-npm install
-npm run develop
+## Learn More
 
-# Create a .env file containing the API_URL variable
-echo 'SKIP_PREFLIGHT_CHECK=true\nREACT_APP_BACKEND_URL="http://localhost:1337' >> .env
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-React server is running here => [http://localhost:3000](http://localhost:3000)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Enjoy this starter!
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

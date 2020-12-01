@@ -27,7 +27,7 @@ const Card = ({ article }) => {
                             <p className="blue">
                               {article.description}
                             </p>
-                            <a class="btn-get-started" >Continue Reading</a>
+                            <a href="post-fullwidth.html" class="btn-get-started" >Continue Reading</a>
                            
                         </div>
                         </div>

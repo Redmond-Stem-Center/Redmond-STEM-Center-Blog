@@ -6,7 +6,6 @@ import Moment from "react-moment";
 
 import ARTICLE_QUERY from "../../queries/article/article";
 
-var foo = "RSC Blog"
 const Article = () => {
   let { id } = useParams(); 
   return (
@@ -25,7 +24,7 @@ const Article = () => {
           <div class=" text-center">
            
             <div class="ima">
-              <img src={article.image.url}></img>
+              <img alt="Blog Post Image" src={article.image.url}></img>
             </div>
             </div> 
            

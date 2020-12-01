@@ -14,8 +14,8 @@ const Article = () => {
         return (
           <div>
              <div>
-              <section id="heroM">
-                <div class="heroM-container">
+              <section id="heroT">
+                <div class="heroT-container">
                  <h6 class="title">{article.title}</h6>
                 </div>
             </section>
@@ -37,7 +37,7 @@ const Article = () => {
                <ul className="uk-navbar-nav">
                 
                 <div className="uk-container uk-container-small blue">
-                  Post by: {article.author}    
+                  {article.author}    
                 </div>              
                 
                   <div className="uk-container uk-container-small blue">

@@ -24,7 +24,7 @@ const Article = () => {
           <div class=" text-center">
            
             <div class="ima">
-              <img alt="Blog Post Image" src={article.image.url}></img>
+              <img alt="Blog Post" src={article.image.url}></img>
             </div>
             </div> 
            

@@ -658,15 +658,15 @@
       background: url("../img/hero-bg.jpg");
       position: relative;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
       background-position: bottom;
-      background-color: #171D21;
+      background-color: #EAD7E1;
    }
    .heroT-container .title {
     font-size: 6vw;
     font-family: "Wavehaus", sans-serif;
     font-weight: bold;
-    color: white;
+    color: #171D21;
     margin-top: 2%;
   }
     #heroT h1 {

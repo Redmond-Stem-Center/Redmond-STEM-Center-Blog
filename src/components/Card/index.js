@@ -8,7 +8,7 @@ const Card = ({ article }) => {
     <div class="cardBack wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
                     <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
                         <div class="text-center">
-                            <a href="post-fullwidth.html"><img class="img-fluid"  src={blog-api.redmondstemcenter.org + article.image.url}
+                            <a href="post-fullwidth.html"><img class="img-fluid"  src={process.env.REACT_APP_BACKEND_URL + article.image.url}
             alt={article.image.url}/></a>
                         </div>
                         <div class="container">

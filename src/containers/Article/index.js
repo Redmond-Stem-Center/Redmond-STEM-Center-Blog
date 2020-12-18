@@ -24,7 +24,7 @@ const Article = () => {
           <div class=" text-center">
            
             <div class="ima">
-              <img alt="Blog Post" src={process.env.REACT_APP_BACKEND_URL + article.image.url}></img>
+              <img alt="Blog Post" src={blog-api.redmondstemcenter.org + article.image.url}></img>
             </div>
             </div> 
            

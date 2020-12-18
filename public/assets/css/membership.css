@@ -1593,8 +1593,12 @@
   #footer {
     background: url("../img/Frame.svg") top center no-repeat;
     font-size: 14px;
+    size: cover;
     margin-top: 3%;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   
   #footer::before {

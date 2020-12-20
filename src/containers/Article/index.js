@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 
 import ARTICLE_QUERY from "../../queries/article/article";
-
+const imgurl = "https://blog-api.redmondstemcenter.org";
 const Article = () => {
   let { id } = useParams(); 
   return (
@@ -24,7 +24,7 @@ const Article = () => {
           <div class=" text-center">
            
             <div class="ima">
-              <img alt="Blog Post" src={process.env.REACT_APP_BACKEND_URL + article.image.url}></img>
+              <img alt="Blog Post" src={imgurl + article.image.url}></img>
             </div>
             </div> 
            

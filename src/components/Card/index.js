@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Moment from "react-moment";
 
+const imgurl = "https://blog-api.redmondstemcenter.org";
 const Card = ({ article }) => {
   return (
     <Link to={`/article/${article.id}`} className="uk-link-reset">
     <div class="cardBack wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
                     <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
                         <div class="text-center">
-                            <a href="post-fullwidth.html"><img class="img-fluid"  src={process.env.REACT_APP_BACKEND_URL + article.image.url}
+                            <a href="post-fullwidth.html"><img class="img-fluid"  src={imgurl+article.image.url}
             alt={article.image.url}/></a>
                         </div>
                         <div class="container">

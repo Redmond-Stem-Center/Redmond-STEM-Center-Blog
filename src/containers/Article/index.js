@@ -30,7 +30,8 @@ const Article = () => {
            
             <div className="uk-section">
               <div className="uk-container uk-container-small CategoryTitle blue">
-                <ReactMarkdown source={article.content} />
+                <ReactMarkdown source={article.content}  transformImageUri={uri =>
+    uri.startsWith("http") ? uri : `${'https://blog-api.redmondstemcenter.org'}${uri}`} />
                </div>
                <div className="uk-container uk-container-small ">
                <hr class="spacingF"></hr>

@@ -26,6 +26,10 @@ jobs:
           SSH_DEPLOY_KEY: ${{secrets.SSH_DEPLOY_KEY}}
       - name: deploy via rsync
         run: |
+          ip a
+          echo ${{secrets.SSH_DEPLOY_USER}} | sha256sum
+          echo ${{secrets.SSH_DEPLOY_HOSTNAME}} | sha256sum
+          curl https://ifconfig.co
           rsync -avP --delete build/ ${{secrets.SSH_DEPLOY_USER}}@${{secrets.SSH_DEPLOY_HOSTNAME}}:
         shell: bash
 

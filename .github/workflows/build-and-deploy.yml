@@ -1,0 +1,35 @@
+name: build-and-deploy
+on: [push]
+jobs:
+  build-and-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - name: install rsync
+        run: |
+          sudo apt-get update && sudo apt-get -y install rsync
+        shell: bash
+      - name: install npm packages
+        run: npm install
+      - name: build via npm
+        env:
+          NODE_ENV: production
+        run: npm run build
+      - name: install ssh key
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{secrets.SSH_DEPLOY_HOSTNAME}} > ~/.ssh/known_hosts
+        shell: bash
+        env:
+          SSH_DEPLOY_KEY: ${{secrets.SSH_DEPLOY_KEY}}
+      - name: deploy via rsync
+        run: |
+          echo I did not plan on getting this far.
+        shell: bash
+

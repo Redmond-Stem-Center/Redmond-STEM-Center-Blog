@@ -9,10 +9,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
-      - name: install rsync
-        run: |
-          sudo apt-get update && sudo apt-get -y install rsync
-        shell: bash
       - name: install npm packages
         run: npm install
       - name: build via npm
@@ -30,6 +26,6 @@ jobs:
           SSH_DEPLOY_KEY: ${{secrets.SSH_DEPLOY_KEY}}
       - name: deploy via rsync
         run: |
-          echo I did not plan on getting this far.
+          rsync -avP --delete build/ ${{secrets.SSH_DEPLOY_USER}}@${{secrets.SSH_DEPLOY_HOSTNAME}}:
         shell: bash
 

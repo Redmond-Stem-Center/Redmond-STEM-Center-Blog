@@ -88,7 +88,7 @@ h4 {
 
 .cardBack{
   background: rgba(224, 223, 223, 0.5);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.404);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.404);
 }
 .headerTextBl{
   margin-top: 1.5%;

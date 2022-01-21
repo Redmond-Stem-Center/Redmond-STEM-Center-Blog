@@ -17,6 +17,7 @@ const Article = () => {
               <section id="heroT">
                 <div class="heroT-container">
                  <h6 class="title">{article.title}</h6>
+                 <div title="Back to Menu" class="backArrow"> <a href="/index.html">&#10140;</a> </div>
                 </div>
             </section>
             </div>

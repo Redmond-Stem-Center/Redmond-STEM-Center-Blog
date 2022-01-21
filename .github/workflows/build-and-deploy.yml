@@ -26,6 +26,6 @@ jobs:
           SSH_DEPLOY_KEY: ${{secrets.SSH_DEPLOY_KEY}}
       - name: deploy via rsync
         run: |
-          rsync -ave "ssh -q" --delete build/ ${{secrets.SSH_DEPLOY_USER}}@${{secrets.SSH_DEPLOY_HOSTNAME}}:
+          rsync -ave "ssh -q -p 2222" --delete build/ ${{secrets.SSH_DEPLOY_USER}}@${{secrets.SSH_DEPLOY_HOSTNAME}}:
         shell: bash
 

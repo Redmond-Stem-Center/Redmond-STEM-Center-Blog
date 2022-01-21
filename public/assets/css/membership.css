@@ -385,7 +385,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    border-bottom: 1px solirgb(192, 191, 191)6);
+    border-bottom: 1px solirgb(192, 191, 191);
   }
   
   .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
